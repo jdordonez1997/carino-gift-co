@@ -1,7 +1,7 @@
-const CACHE='carino-pwa-v5';
+const CACHE='carino-pwa-v6';
 const ASSETS=[
   './','./index.html','./style.css','./install.js','./manifest.webmanifest','./marca.png',
-  './icons/favicon-pink-hd-64.png','./icons/apple-touch-icon-pink-hd.png','./icons/icon-pink-hd-192.png','./icons/icon-pink-hd-512.png','./icons/icon-pink-hd-1024.png','./icons/icon-pink-hd-maskable-512.png',
+  './icons/icon-pink-vector-v2.svg','./icons/favicon-pink-crisp-64.png','./icons/apple-touch-icon-pink-hd.png','./icons/icon-pink-crisp-192.png','./icons/icon-pink-hd-512.png','./icons/icon-pink-hd-1024.png','./icons/icon-pink-hd-maskable-512.png',
   './dashboard/','./dashboard/index.html','./dashboard/model.js','./dashboard/dashboard.js',
   './cliente/','./cliente/index.html','./cliente/style.css','./cliente/app.js'
 ];
