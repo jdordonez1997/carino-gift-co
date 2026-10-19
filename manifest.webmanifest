@@ -8,15 +8,15 @@
   "scope": "./",
   "display": "standalone",
   "orientation": "any",
-  "background_color": "#fff9f8",
+  "background_color": "#f8c8d1",
   "theme_color": "#c9183a",
   "icons": [
-    {"src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
-    {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
-    {"src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+    {"src": "icons/icon-pink-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "icons/icon-pink-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "icons/icon-pink-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
   ],
   "shortcuts": [
-    {"name": "Mi dashboard", "short_name": "Dashboard", "url": "dashboard/", "icons": [{"src": "icons/icon-192.png", "sizes": "192x192"}]},
-    {"name": "Consultar pedido", "short_name": "Pedido", "url": "cliente/", "icons": [{"src": "icons/icon-192.png", "sizes": "192x192"}]}
+    {"name": "Mi dashboard", "short_name": "Dashboard", "url": "dashboard/", "icons": [{"src": "icons/icon-pink-192.png", "sizes": "192x192"}]},
+    {"name": "Consultar pedido", "short_name": "Pedido", "url": "cliente/", "icons": [{"src": "icons/icon-pink-192.png", "sizes": "192x192"}]}
   ]
 }

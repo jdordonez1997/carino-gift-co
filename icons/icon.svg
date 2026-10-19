@@ -1,6 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
   <title id="title">Cariño Gift Co.</title>
-  <rect width="512" height="512" rx="112" fill="#fff9f8"/>
-  <circle cx="256" cy="256" r="220" fill="#f8c8d1" stroke="#6b3045" stroke-width="8"/>
+  <rect width="512" height="512" fill="#f8c8d1"/>
   <text x="246" y="365" text-anchor="middle" font-family="Cooper Black, Georgia, serif" font-size="360" fill="#c9183a">C</text>
 </svg>

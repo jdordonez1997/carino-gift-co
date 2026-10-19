@@ -18,16 +18,10 @@ COLORS = {
 def make_icon(size: int, filename: str, maskable: bool = False) -> None:
     scale = 4
     canvas = size * scale
-    image = Image.new("RGB", (canvas, canvas), COLORS["cream"])
+    image = Image.new("RGB", (canvas, canvas), COLORS["pink"])
     draw = ImageDraw.Draw(image)
 
-    margin_ratio = 0.14 if maskable else 0.055
-    margin = int(canvas * margin_ratio)
-    outline = max(scale * 2, int(canvas * 0.015))
-    bounds = (margin, margin, canvas - margin, canvas - margin)
-    draw.ellipse(bounds, fill=COLORS["pink"], outline=COLORS["outline"], width=outline)
-
-    font_size = int(canvas * (0.61 if maskable else 0.70))
+    font_size = int(canvas * (0.58 if maskable else 0.70))
     font = ImageFont.truetype(str(FONT), font_size)
     letter = "C"
     box = draw.textbbox((0, 0), letter, font=font, stroke_width=0)
@@ -42,9 +36,9 @@ def make_icon(size: int, filename: str, maskable: bool = False) -> None:
 
 
 ICONS.mkdir(parents=True, exist_ok=True)
-make_icon(32, "favicon-32.png")
-make_icon(180, "apple-touch-icon.png")
-make_icon(192, "icon-192.png")
-make_icon(512, "icon-512.png")
-make_icon(512, "icon-maskable-512.png", maskable=True)
+make_icon(32, "favicon-pink-32.png")
+make_icon(180, "apple-touch-icon-pink.png")
+make_icon(192, "icon-pink-192.png")
+make_icon(512, "icon-pink-512.png")
+make_icon(512, "icon-pink-maskable-512.png", maskable=True)
 
