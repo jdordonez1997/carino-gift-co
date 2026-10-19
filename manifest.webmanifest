@@ -1,0 +1,22 @@
+{
+  "id": "/carino-gift-co/",
+  "name": "Cariño Gift Co.",
+  "short_name": "Cariño",
+  "description": "Pedidos, gastos, dashboard y seguimiento de Cariño Gift Co.",
+  "lang": "es-EC",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#fff9f8",
+  "theme_color": "#c9183a",
+  "icons": [
+    {"src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ],
+  "shortcuts": [
+    {"name": "Mi dashboard", "short_name": "Dashboard", "url": "dashboard/", "icons": [{"src": "icons/icon-192.png", "sizes": "192x192"}]},
+    {"name": "Consultar pedido", "short_name": "Pedido", "url": "cliente/", "icons": [{"src": "icons/icon-192.png", "sizes": "192x192"}]}
+  ]
+}

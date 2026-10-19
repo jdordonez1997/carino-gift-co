@@ -3,8 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#c9183a">
   <meta name="description" content="Accesos conectados de Cariño Gift Co. para administrar y consultar pedidos.">
   <title>Cariño · Pedidos conectados</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="hub-body">
@@ -30,7 +34,9 @@
         </a>
       </div>
       <p class="hub-help"><strong>Uso diario:</strong> ingresa pedidos y gastos en la hoja, y actualiza únicamente el estado. El resto se calcula solo.</p>
+      <button class="btn primary install-app" id="install-app" type="button" hidden>Instalar Cariño como app</button>
     </section>
   </main>
+  <script src="install.js"></script>
 </body>
 </html>
