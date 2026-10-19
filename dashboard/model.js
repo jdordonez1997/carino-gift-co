@@ -23,13 +23,13 @@
     });return {...data,orders};
   }
   function metrics(data,start,end){
-    const delivered=data.orders.filter(o=>o.status==='Entregado'&&inPeriod(o.closed,start,end));
+    const booked=data.orders.filter(o=>o.status!=='Cancelado'&&inPeriod(o.date,start,end));
     const canceled=data.orders.filter(o=>o.status==='Cancelado'&&inPeriod(o.closed,start,end));
-    const sales=round(delivered.reduce((n,o)=>n+value(o.total),0));
+    const sales=round(booked.reduce((n,o)=>n+value(o.total),0));
     const cancel=round(canceled.reduce((n,o)=>n+o.paid,0));
     const expenses=round(data.expenses.filter(e=>inPeriod(e.date,start,end)).reduce((n,e)=>n+value(e.amount),0));
     const collected=round(data.payments.filter(p=>inPeriod(p.date,start,end)).reduce((n,p)=>n+(p.type==='Devolución'?-1:1)*value(p.amount),0));
-    return {sales,gross:round(sales+cancel),cancel,expenses,net:round(sales+cancel-expenses),collected,cashOut:expenses,cash:round(collected-expenses),open:data.orders.filter(o=>!terminal(o.status)).length,balance:round(data.orders.reduce((n,o)=>n+value(o.balance),0)),unpriced:delivered.filter(o=>!number(o.total)).length,provisional:data.orders.filter(o=>o.notes).length,delivered:delivered.length,purchases:data.expenses.filter(e=>inPeriod(e.date,start,end)).length};
+    return {sales,gross:round(sales+cancel),cancel,expenses,net:round(sales+cancel-expenses),collected,cashOut:expenses,cash:round(collected-expenses),open:data.orders.filter(o=>!terminal(o.status)).length,balance:round(data.orders.reduce((n,o)=>n+value(o.balance),0)),unpriced:booked.filter(o=>!number(o.total)).length,provisional:data.orders.filter(o=>o.notes).length,booked:booked.length,purchases:data.expenses.filter(e=>inPeriod(e.date,start,end)).length};
   }
   root.Carino={calculate,metrics,inPeriod,round,active,terminal};
 })(typeof window!=='undefined'?window:globalThis);
